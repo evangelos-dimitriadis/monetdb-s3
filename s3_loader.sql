@@ -20,10 +20,10 @@ CREATE LOADER csv_loader(vars STRING, line_buffer INT) LANGUAGE PYTHON {
             elif dictionary[keys[i]] == "FLOAT":
                 columns_dict[keys[i]].append(float(row[i - 1]))
             elif dictionary[keys[i]] == "STRING":
-                columns_dict[keys[i]].append(float(row[i - 1]))
+                columns_dict[keys[i]].append(str(row[i - 1]))
 
         if num_lines >= line_buffer:
-            emit.emit(columns_dict)
+            _emit.emit(columns_dict)
             columns_dict = {}
             for i in range(1, len(keys)):
                 columns_dict[keys[i]] = []
