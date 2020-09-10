@@ -1,7 +1,7 @@
 # MonetDB CSV Loader From S3 buckets
 
 This tiny project provides some small python scripts as examples and for testing purposes.
-The preferable way to load an CSV from a s3 bucket is to use COPY INTO FROM url which will be soon
+The preferable way to load a CSV from a s3 bucket is to use COPY INTO FROM url which will be soon
 ready. As an alternative, a python script can be used, especially since MonetDB integrates python.
 
 ## Requirements
